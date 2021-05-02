@@ -157,6 +157,6 @@ class MonteCarlo:
         print("Action Path: " + str(self.actionPath))
         print("Reward Path: " + str(self.rewardPath))
         print("Total Reward: " + str(self.totalReward))
-
-
+        
+# Work of: Timothy P. McCrary, Jesus M. Hernandez
         

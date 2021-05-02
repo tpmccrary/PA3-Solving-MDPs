@@ -64,4 +64,6 @@ class MDPState:
             List[str]: The list of transitional probabilites.
         '''
         return self.actions.get(action)[2]
+        
+# Work of: Timothy P. McCrary, Jesus M. Hernandez
 

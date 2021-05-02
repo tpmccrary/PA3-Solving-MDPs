@@ -83,3 +83,5 @@ def modelMDP() -> Dict[str, MDPState]:
 
 if __name__ == '__main__':
     main()
+
+# Work of: Timothy P. McCrary, Jesus M. Hernandez
