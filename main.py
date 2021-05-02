@@ -4,11 +4,11 @@ from pa3_solving_mdps.q_learning import QLearning
 from pa3_solving_mdps.mdp_state import MDPState
 
 def main():
-    print("This is the main.")
 
+    # START: Model of the MDP.
     mdpStates = {}
 
-
+    # Adding state RU8p, along with its actions.
     mdpState = MDPState("RU8p")
     mdpState.addAction("P", [2], ["TU10p"])
     mdpState.addAction("R", [0], ["RU10p"])

@@ -9,6 +9,7 @@ class MonteCarlo:
         self.alpha = 0.1
         # The total reward for the episode.
         self.totalReward = 0
+        # The 
         self.episodeRewards = []
         self.statePath = []
         self.actionPath = []

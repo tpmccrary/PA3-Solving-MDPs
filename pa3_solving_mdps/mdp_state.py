@@ -1,11 +1,19 @@
 
+# Object that represents a state in the MDP.
 class MDPState: 
 
     def __init__(self, name) -> None:
+        # The name of the state (i.e. RU8p)
         self.name = name
+        # The actions of the sate represented as a hash table (i.e. actions = {"P": [], "R": []]})
         self.actions = {}
         self.value = 0
 
+    # Adds an action to the state.
+    '''
+    @param self: This object.
+    @param action: An action 
+    '''
     def addAction(self, action, rewards, nextStates, transProbs=[1]):
         self.actions[action] = [rewards, nextStates, transProbs]
 
