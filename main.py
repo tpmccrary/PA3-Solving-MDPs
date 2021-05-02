@@ -8,6 +8,7 @@ def main():
 
     mdpStates = {}
 
+
     mdpState = MDPState("RU8p")
     mdpState.addAction("P", [2], ["TU10p"])
     mdpState.addAction("R", [0], ["RU10p"])
@@ -27,7 +28,7 @@ def main():
 
     mdpState = MDPState("RD10p")
     mdpState.addAction("R", [0], ["RD8a"])
-    mdpState.addAction("P", [2, 2], ["RD8a, RD10a"], [.5, .5])
+    mdpState.addAction("P", [2, 2], ["RD8a", "RD10a"], [.5, .5])
     mdpStates[mdpState.name] = mdpState
 
     mdpState = MDPState("RU8a")
@@ -57,10 +58,12 @@ def main():
     mdpState.addAction("any", [3], ["11aCB"])
     mdpStates[mdpState.name] = mdpState
 
-    print(mdpStates.keys())
-    
+    mdpState = MDPState("11aCB")
+    mdpStates[mdpState.name] = mdpState
+
 
     monteCarlo = MonteCarlo(mdpStates)
+    monteCarlo.monteCarloAlg()
     # valueIteration = ValueIteration()
     # qLearning = QLearning()
 
