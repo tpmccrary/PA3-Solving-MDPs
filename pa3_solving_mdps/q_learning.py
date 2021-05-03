@@ -1,7 +1,5 @@
-
 from pa3_solving_mdps.mdp_state import MDPState
 from typing import Dict, List
-import random
 
 
 class QLearning:
