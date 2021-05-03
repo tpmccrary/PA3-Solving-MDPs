@@ -1,5 +1,93 @@
 # PA3-Solving-MDPs
 
+## Part I
+To run the Monte-Carlo Algorithm:
+```
+python3 main.py 1
+```
+
+### Final Traces
+```
+RU8p: 3.4091
+TU10p: 3.1563
+RU10p: 2.1882
+RD10p: 3.2020
+RU8a: 2.2839
+RD8a: 3.2890
+TU10a: 0.9173
+RU10a: 1.7155
+RD10a: 3.6080
+TD10a: 2.0054
+11aCB: 0
+
+Average Episode Reward: 3.44
+```
+
+## Part II
+To run the Value Iteration Algorithm:
+```
+python3 main.py 2
+```
+
+### Final Traces
+```
+
+```
+
+## Part III
+
+To run the Q-Learning Algorithm:
+```
+python3 main.py 3
+```
+
+### Final Traces
+```
+________State: RU8p_________
+Action: P    Q-Value: 0.7352
+Action: R    Q-Value: 0.3604
+Action: S    Q-Value: 0.2608
+
+________State: TU10p________
+Action: P    Q-Value: 0.0000
+Action: R    Q-Value: 0.3658
+
+________State: RU10p________
+Action: R    Q-Value: 0.0000
+Action: P    Q-Value: 0.3823
+Action: S    Q-Value: 0.0932
+
+________State: RD10p________
+Action: R    Q-Value: 0.0000
+Action: P    Q-Value: 1.0593
+
+________State: RU8a_________
+Action: P    Q-Value: 0.1010
+Action: R    Q-Value: 0.0000
+Action: S    Q-Value: 0.2843
+
+________State: RD8a_________
+Action: R    Q-Value: 1.0478
+Action: P    Q-Value: 0.4822
+
+________State: TU10a________
+Action: any    Q-Value: 0.00
+
+________State: RU10a________
+Action: any    Q-Value: 0.00
+
+________State: RD10a________
+Action: any    Q-Value: 0.00
+
+________State: TD10a________
+Action: any    Q-Value: 0.00
+
+________State: 11aCB________
+Action: None   Q-Value: None
+
+Number of Episodes: 7
+Optimal Path: ['RU8p', 'TU10p', 'RU8a', 'RD10a', '11aCB']
+```
 
 # Assignment Details
 
