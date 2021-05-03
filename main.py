@@ -20,19 +20,19 @@ def main():
     mdpStates = modelMDP()
 
 
-    # valueIteration = ValueIteration()
-    
     if (algoChoice == 1):
         monteCarlo = MonteCarlo(mdpStates)
         monteCarlo.monteCarloAlg()
     elif (algoChoice == 2):
-        pass
+        valueIteration = ValueIteration(mdpStates)
+        valueIteration.valueIterationAlg()
     elif (algoChoice == 3):
         qLearning = QLearning(mdpStates)
         qLearning.qLearningAlg("RU8p", "11aCB")
     else:
         print("Not a valid command, please use 1, 2, or 3.")
         sys.exit(0)
+
 
 def modelMDP() -> Dict[str, MDPState]:
     '''Returns a modeled MDP as a dictionary with MDPState objects.
