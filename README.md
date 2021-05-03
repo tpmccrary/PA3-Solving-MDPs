@@ -23,6 +23,17 @@ TD10a: 2.0054
 Average Episode Reward: 3.44
 ```
 
+## Part II
+To run the Value Iteration Algorithm:
+```
+python3 main.py 2
+```
+
+### Final Traces
+```
+
+```
+
 ## Part III
 
 To run the Q-Learning Algorithm:
