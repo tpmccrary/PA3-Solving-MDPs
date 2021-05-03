@@ -11,9 +11,13 @@ def main():
     mdpStates = modelMDP()
 
 
-    monteCarlo = MonteCarlo(mdpStates)
-    monteCarlo.monteCarloAlg()
-    # valueIteration = ValueIteration()
+    # monteCarlo = MonteCarlo(mdpStates)
+    # monteCarlo.monteCarloAlg()
+
+    valueIteration = ValueIteration(mdpStates)
+    valueIteration.valueIterationAlg()
+    
+
     # qLearning = QLearning()
 
 def modelMDP() -> Dict[str, MDPState]:
