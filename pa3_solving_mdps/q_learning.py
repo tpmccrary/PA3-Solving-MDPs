@@ -68,42 +68,43 @@ class QLearning:
                 # Get the q value for the current state/action pair.
                 newQvalue: float = self.qValue(currentState, randAction, nextState)
 
+                # Print the details for this episode.
+                print("Action Taken: " + randAction)
+                print("Reward: " + str(actionRewards[0]))
+                print("Prev. Q Value: " + str(currentState.getActionQValues(randAction)[0]))
+                print("New Q Value: " + str(newQvalue))
+
                 # If the change between the new q-value and the old q-vlaue is less than the max alpha change, we end the algorithm.
                 if (newQvalue - currentState.getActionQValues(randAction)[0] < self.maxChangeThreshold):
                     print("CHANGE LESS THAN 0.001")
                     thresholdMet = True
                     break
                 
-                # Print the details for this episode.
-                print("Action: " + randAction)
-                print("Prev. Q Value: " + str(currentState.getActionQValues(randAction)[0]))
-                print("New Q Value: " + str(newQvalue))
-                print("Reward: " + str(actionRewards[0]))
-
-
                 # Update the state/action pairs q-value.
                 currentState.setActionQValue(randAction, newQvalue, 0)
 
                 # Go to the next state.
                 currentState = self.mdpStates.get(currentState.getActionNextStates(randAction)[0])
 
+            print("End of episode " + str(episodeCount) + ".")
             # After each episode, make the alpha smaller.
             self.alpha = self.alpha * self.alphaChangeRate
             # Increment episdoe counter.
             episodeCount += 1
         
         # Finally, when we are done with the algorithm, print out all the details.
+        print()
         print("*****FINAL RESULTS*****")
         self.printAllQValues()
         print()
-        print("Number of Episods: " + str(episodeCount))
+        print("Number of Episodes: " + str(episodeCount))
         print("Shortest Path:")
         print(self.getShortestPath(startStateName, endStateName))
                 
         
 
     def temporalDifference(self, currentState: MDPState, action: str, nextState: MDPState) -> float:
-        '''Calculates the temporal difference of teh state/action pair.
+        '''Calculates the temporal difference of the state/action pair.
 
         Args:
             currentState (MDPState): The current state we are at.
@@ -170,11 +171,13 @@ class QLearning:
         stateName: str
         for stateName in self.mdpStates.keys():
             state: MDPState = self.mdpStates.get(stateName)
-            print("____State: " + state.name + "____")
+            # print("____State: " + state.name + "____")
+            print("____State: {}".format(stateName) + "____")
             
             action: str
             for action in state.actions.keys():
-                print("Action: " + action + "    Q-Value: " + str(state.getActionQValues(action)[0]))
+                print("Action: {}".format(action) + "    Q-Value: {:.4f}".format(state.getActionQValues(action)[0]))
+                # print("Action: " + action + "    Q-Value: " + str(state.getActionQValues(action)[0]))
             
             
 
