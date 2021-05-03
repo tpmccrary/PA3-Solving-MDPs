@@ -1,5 +1,28 @@
 # PA3-Solving-MDPs
 
+## Part I
+To run the Monte-Carlo Algorithm:
+```
+python3 main.py 1
+```
+
+### Final Traces
+```
+RU8p: 3.4091
+TU10p: 3.1563
+RU10p: 2.1882
+RD10p: 3.2020
+RU8a: 2.2839
+RD8a: 3.2890
+TU10a: 0.9173
+RU10a: 1.7155
+RD10a: 3.6080
+TD10a: 2.0054
+11aCB: 0
+
+Average Episode Reward: 3.44
+```
+
 ## Part III
 
 To run the Q-Learning Algorithm:
