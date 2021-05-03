@@ -1,5 +1,57 @@
 # PA3-Solving-MDPs
 
+## Part III
+
+To run the Q-Learning Algorithm:
+```
+python3 main.py 3
+```
+
+### Final Traces
+________State: RU8p_________
+Action: P    Q-Value: 0.7352
+Action: R    Q-Value: 0.3604
+Action: S    Q-Value: 0.2608
+
+________State: TU10p________
+Action: P    Q-Value: 0.0000
+Action: R    Q-Value: 0.3658
+
+________State: RU10p________
+Action: R    Q-Value: 0.0000
+Action: P    Q-Value: 0.3823
+Action: S    Q-Value: 0.0932
+
+________State: RD10p________
+Action: R    Q-Value: 0.0000
+Action: P    Q-Value: 1.0593
+
+________State: RU8a_________
+Action: P    Q-Value: 0.1010
+Action: R    Q-Value: 0.0000
+Action: S    Q-Value: 0.2843
+
+________State: RD8a_________
+Action: R    Q-Value: 1.0478
+Action: P    Q-Value: 0.4822
+
+________State: TU10a________
+Action: any    Q-Value: 0.00
+
+________State: RU10a________
+Action: any    Q-Value: 0.00
+
+________State: RD10a________
+Action: any    Q-Value: 0.00
+
+________State: TD10a________
+Action: any    Q-Value: 0.00
+
+________State: 11aCB________
+Action: None   Q-Value: None
+
+Number of Episodes: 7
+Optimal Path: ['RU8p', 'TU10p', 'RU8a', 'RD10a', '11aCB']
 
 # Assignment Details
 
