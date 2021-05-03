@@ -31,7 +31,19 @@ python3 main.py 2
 
 ### Final Traces
 ```
+Number of iterations:  5
 
+Final Values:  {'RU8p': 5.3757485, 
+                'TU10p': 2.9304, 
+                'RU10p': 3.9203, 
+                'RD10p': 6.44015, 
+                'RU8a': 2.96, 
+                'RD8a': 4.97, 
+                'TU10a': -1.0, 
+                'RU10a': 0.0, 
+                'RD10a': 4.0, 
+                'TD10a': 3.0, 
+                '11aCB': 0.0}
 ```
 
 ## Part III
