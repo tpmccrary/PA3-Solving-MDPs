@@ -98,8 +98,7 @@ class QLearning:
         self.printAllQValues()
         print()
         print("Number of Episodes: " + str(episodeCount))
-        print("Shortest Path:")
-        print(self.getShortestPath(startStateName, endStateName))
+        print("Optimal Path: " + str(self.getOptimalPath(startStateName, endStateName)))
                 
         
 
@@ -135,7 +134,7 @@ class QLearning:
         '''
         return currentState.getActionQValues(action)[0] + (self.alpha * self.temporalDifference(currentState, action, nextState))
 
-    def getShortestPath(self, startStateName: str, endStateName: str) -> List[str]:
+    def getOptimalPath(self, startStateName: str, endStateName: str) -> List[str]:
         '''Returns the shortest state path as a list by getting the best q-values.
 
         Args:
