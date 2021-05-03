@@ -8,6 +8,7 @@ python3 main.py 3
 ```
 
 ### Final Traces
+```
 ________State: RU8p_________
 Action: P    Q-Value: 0.7352
 Action: R    Q-Value: 0.3604
@@ -52,6 +53,7 @@ Action: None   Q-Value: None
 
 Number of Episodes: 7
 Optimal Path: ['RU8p', 'TU10p', 'RU8a', 'RD10a', '11aCB']
+```
 
 # Assignment Details
 
